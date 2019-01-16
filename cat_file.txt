@@ -1,0 +1,35 @@
+
+` Enter the categories and values here
+` data-gen supports as many categories and category values as needed
+` lines containing the grave character (`) are ignored
+` category types must begin with an asterisk (*)
+` no values can contain an asterisk (*)
+
+
+*COLORS*
+Red,
+Blue,
+Yellow,
+Green
+
+
+*PRODUCTS*
+Tape Dispensers,
+Staplers,
+Erasers,
+Calendars,
+Binder Rings,
+Pens,
+Pencils,
+Notebooks,
+Paperclips,
+Ink,
+Paper,
+Knick-knacks
+
+
+*REGIONS*
+Northern,
+Southern,
+Eastern,
+Western
