@@ -7,7 +7,7 @@
 # SET-UP & RUN
 0. Make sure python3 is installed and up to date.
 1. Download the repository into any directory.
-2. Edit '*cat_file.txt*' as needed.
+2. Edit '[cat_file.txt](https://github.com/eferrara3/data-gen/blob/master/cat_file.txt)' as needed.
 3. From the command-line, navigate to the directory and execute `python3 run.py`.
 4. Enter the desired units of time and the output file name.
 5. The output will be saved to the 'results' directory.
@@ -21,12 +21,16 @@
 
 
 # EXAMPLE
-'*example_data.csv*' shows the results for 10 units of time. 
-[Link](https://github.com/eferrara3/data-gen/blob/master/results/example_data.csv)
+'[example_data.csv](https://github.com/eferrara3/data-gen/blob/master/results/example_data.csv)' shows the results for 10 units of time. 
 
 
 
 # HOW IT WORKS
-1. '*file_read.py*' uses `Parser()` to define the state for each line in '*cat_file.txt*' with `Enum`. It parses and cleans the lists and stores each list as an entry in a dictionary object using the asterisk line as the key.
-2. '*line_maker.py*' initiates and instance of the `Parser()` class through `LineMaker()`. It iterates through each dictionary entry to assemble a tuple of the variable length cartesian product. The `random` module create the assigned static and variable values for each tuple. A file is written to the 'results' directory using the `csv` module.
-3. '*run.py*' prompts for the time required and the desired output file name (with some exception handling), and then runs the `LineMaker()` method using those values.
+1. '[file_read.py](https://github.com/eferrara3/data-gen/blob/master/file_read.py)' defines class `Parser()`, which uses `Enum` to create a state for each type of line in '*cat_file.txt*'. It parses and cleans the lists and stores each list as an entry in a dictionary object using the asterisk line as the key.
+2. '[line_maker.py](https://github.com/eferrara3/data-gen/blob/master/line_maker.py)' initiates an instance of the `Parser()` class through `LineMaker()`. It iterates through each dictionary entry to assemble a tuple of the variable length cartesian product. The `random` module creates the assigned static and variable values for each tuple. A file is written to the 'results' directory using the `csv` module.
+3. '[run.py](https://github.com/eferrara3/data-gen/blob/master/run.py)' prompts for the time required and the desired output file name (with some exception handling), and then runs the `LineMaker()` method using those values.
+
+### New To Me:
+- Enum module
+- Variable length iterators
+- More experience in object-oriented programming
