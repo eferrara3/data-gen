@@ -12,30 +12,29 @@ class LineMaker(object):
 
 # initialize
     def __init__(self):
-        self.t = 1
         self.categories=Parser().run(edit_file)
 
 # take in two lists, cartesian product, return tuple
     def combo_maker(self, l1, l2):
         loop_list = []
-        for f in l1:
+        for first in l1:
             if len(l2) is 0:
-                loop_list.append(f)
+                loop_list.append(first)
                 continue
-            for s in l2:
-                if type(s) is tuple:
-                    a = f,
-                    loop_list.append(s + a)
+            for second in l2:
+                if type(second) is tuple:
+                    a = first,
+                    loop_list.append(second + a)
                 else:
-                    a = s,f
+                    a = second,first
                     loop_list.append(a)
         return loop_list
 
 # loop with combo_maker to return all combinations as list of tuples
     def dict_parse(self, dict):
         combos = []
-        for vl in dict.values():
-            combos = self.combo_maker(vl, combos)
+        for val_list in dict.values():
+            combos = self.combo_maker(val_list, combos)
         return combos
         print(combos)
 
@@ -43,7 +42,7 @@ class LineMaker(object):
     def price_maker(self, combos_list, time):
         w_lines = []
         t_line = []
-        for c in combos_list:
+        for combo in combos_list:
             unit_retail = random.randint(500,1000)
             unit_cost = random.randint(100,unit_retail)/100.0
             unit_retail = unit_retail/100.0
@@ -54,7 +53,7 @@ class LineMaker(object):
                 income = round((unit_retail * units_sold),2)
                 returned = round((unit_retail * units_returned),2)
                 t_tup = t,unit_retail,unit_cost,units_sold,units_returned,income,returned
-                t_line = c + t_tup
+                t_line = combo + t_tup
                 w_lines.append(t_line)
                 t += 1
         return w_lines

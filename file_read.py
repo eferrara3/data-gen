@@ -38,8 +38,8 @@ class Parser(object):
 # combine file read, clean, state, and handling
     def run(self, edit_file):
         with open(edit_file) as src:
-            for l in src.readlines():
-                c = l.rstrip(',\n ')
-                s = self.line_state(c)
-                self.line_handle(s,c)
+            for line in src.readlines():
+                clean_line = line.rstrip(',\n ')
+                line_state = self.line_state(clean_line)
+                self.line_handle(line_state,clean_line)
         return self.categories
