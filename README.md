@@ -21,7 +21,7 @@
 
 
 # EXAMPLE
-'[example_data.csv](https://github.com/eferrara3/data-gen/blob/master/results/example_data.csv)' shows the results for 10 units of time. 
+'[example_data.csv](https://github.com/eferrara3/data-gen/blob/master/results/example_data.csv)' shows the results for 10 units of time.
 
 
 
@@ -30,7 +30,7 @@
 2. '[line_maker.py](https://github.com/eferrara3/data-gen/blob/master/line_maker.py)' initiates an instance of the `Parser()` class through `LineMaker()`. It iterates through each dictionary entry to assemble a tuple of the variable length cartesian product. The `random` module creates the assigned static and variable values for each tuple. A file is written to the 'results' directory using the `csv` module.
 3. '[run.py](https://github.com/eferrara3/data-gen/blob/master/run.py)' prompts for the time required and the desired output file name (with some exception handling), and then runs the `LineMaker()` method using those values.
 
-### New To Me:
+### Topics Explored:
 - Enum module
 - Variable length iterators
 - More experience in object-oriented programming
