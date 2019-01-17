@@ -21,7 +21,8 @@
 
 
 # EXAMPLE
-'*example_data.csv*' shows the results for 10 units of time.
+'*example_data.csv*' shows the results for 10 units of time. 
+[Link](https://github.com/eferrara3/data-gen/blob/master/results/example_data.csv)
 
 
 
