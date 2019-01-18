@@ -32,5 +32,5 @@
 
 ### Topics Explored:
 - Enum module
-- Variable length iterators
+- Variable width iterators
 - More experience in object-oriented programming
