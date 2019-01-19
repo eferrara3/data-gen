@@ -1,6 +1,6 @@
 
 # ABOUT
-**data-gen** is a Python3 application that generates random sales data over time for any size set of categories. It takes in a text file containing lists of the desired categories and category values, assigns a dollar amount for cost and retail, and outputs a csv file of the number of units sold and returned as well as the associated dollar value over time. The cost and retail amount remain the same over time while the units sold and returned vary.
+**data-gen** is a Python3 script that generates random sales data over time for any size set of categories. It takes in a text file containing lists of the desired categories and category values, assigns a dollar amount for cost and retail, and outputs a csv file of the number of units sold and returned as well as the associated dollar value over time. The cost and retail amount remain the same over time while the units sold and returned vary.
 
 
 
