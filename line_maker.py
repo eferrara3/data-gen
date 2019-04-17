@@ -18,7 +18,7 @@ class LineMaker(object):
     def combo_maker(self, l1, l2):
         loop_list = []
         for first in l1:
-            if len(l2) is 0:
+            if len(l2) == 0:
                 loop_list.append(first)
                 continue
             for second in l2:
@@ -71,6 +71,6 @@ class LineMaker(object):
         w_lines = [h_line] + w_lines
         w_file_name = w_file_name
         with open(w_file_name, mode='w') as w_csv:
-            writer = csv.writer(w_csv, delimiter=',', quotechar="'", quoting=csv.QUOTE_NONNUMERIC)
+            writer = csv.writer(w_csv, delimiter=',', quoting=csv.QUOTE_NONE)
             for l in w_lines:
                 writer.writerow(l)
